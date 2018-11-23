@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>Aarón Espasandín</title>
-    <link rel="stylesheet" href="/styles/master.css">
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Source+Sans+Pro" rel="stylesheet">
+    <link rel="stylesheet" href="styles\master.css">
 
     <!--mejor coherencia entre navegadores en el diseño predeterminado de los elementos HTML-->
     <link rel="stylesheet" href="styles\normalize.css">
@@ -18,59 +19,63 @@
     <meta name="theme-color" content="#ffffff">
   </head>
   <body>
-    <header>
-      <div class="">
+    <header class="header">
+      <div class="logo">
         <figure>
           <img src="images/logo.png" alt="Logo de Leonidas Esteban">
         </figure>
-      <nav id='menu'>
+      <nav class='menu'>
         <ol>
           <li>
-            <a onclick="$('#portafolio').animatescroll();">Portfolio</a>
+            <a class="link" onclick="$('#portafolio').animatescroll();">Portfolio</a>
           </li>
           <li>
-            <a onclick="$('#experiencia').animatescroll();">Experiencia</a>
+            <a class="link" onclick="$('#experiencia').animatescroll();">Experiencia</a>
           </li>
           <li>
-            <a onclick="$('#contacto').animatescroll();">Trabajemos juntos</a>
+            <a class="link" onclick="$('#contacto').animatescroll();">Trabajemos juntos</a>
           </li>
         </ol>
       </nav>
     </div>
     </header>
 
-    <section class="principal">
+    <section class="hero">
       <h1>
         Hola! Soy <strong>Aarón Espasandín</strong><br/>Desarrollador <strong>JavaScript</strong> con<br/>pasión por el <strong>aprendizaje</strong>
       </h1>
       <img src="images/hero.jpg" width="500px" height="300px" alt="Imagen Principal">
     </section>
-    <section id="portafolio">
+    <section id="portafolio" class="portfolio">
       <h2>Portafolio (Proyectos Destacados)</h2>
-      <article class="">
-        <h3>Platzi Video</h3>
-        <h6>React Native / React</h6>
-        <p><small><strong>Fecha:</strong> 17/11/18</small></p>
-        <p><small><strong>Puedes verlo en:</strong> https://www.platzi.com/native/</small></p>
-        <p>Platzi Video fue el resultado de 3 meses de trabajo
+      <article class="project">
+        <h3 class="project-title">Platzi Video</h3>
+        <h6 class="project-course">React Native / React</h6>
+        <p class="project-date"><small><strong>Fecha:</strong> 17/11/18</small></p>
+        <p class="project-url"><small><strong>Puedes verlo en:</strong> https://www.platzi.com/native/</small></p>
+        <p class="project-description">Platzi Video fue el resultado de 3 meses de trabajo
           para crear la mejor app para enseñar el funcionamiento
           de React y React Native. Desde crear un vista-detalle, hasta patrones avanzados de navegación, este proyecto ha sido el ejemplo de futuros creadores de aplicaciones multiplataforma
         </p>
-        <img src="images/platzi-video-react-native.png" width="500px" alt="React Native Leonidas">
+        <figure class="project-image-container">
+          <img class="project-image" src="images/platzi-video-react-native.png" width="500px" alt="React Native Leonidas">
+        </figure>
       </article>
     </section>
     <section id="experiencia">
       <h2>Más sobre mi experiencia</h2>
-      <article>
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" allow="autoplay encrypted-media" allowfullscreen>
+      <article class="experience">
+        <figure class="experience-video-container">
+          <iframe class="experience-video" width="560" height="315" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" allow="autoplay encrypted-media" allowfullscreen>
           </iframe>
-        <h3>PlatziConf México 2018</h3>
-        <p>El evento más grande sobre gente que quiere aprender más de internet. En este evento te comparto cómo tener una vida de constante aprendizaje.</p>
-        <a href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Charla</a><!--target="_blank" para abrir pestaña aparte-->
+        </figure>
+        <h3 class="experience-title">PlatziConf México 2018</h3>
+        <p class="experience-description">El evento más grande sobre gente que quiere aprender más de internet. En este evento te comparto cómo tener una vida de constante aprendizaje.</p>
+        <a class="experience-url" href="https://www.youtube.com/watch?v=BIS7cWGgJg0" target="_blank">Ver Charla</a><!--target="_blank" para abrir pestaña aparte-->
       </article>
     </section>
-    <section id="contacto">
-      <form action="/suscripcion/">
+    <section id="contacto" class="contact">
+      <form class="form-email" action="/suscripcion/">
         <h3>¿Creamos algo juntos?</h3>
         <!--<label for="email">Déjame tu email</label>-->
         <input type="text" name="email" placeholder="Déjame tu email" id="email">
@@ -78,7 +83,7 @@
         <!--<button type="button" name="boton-contacto">Enviar</button>-->
       </form>
     </section>
-    <footer>
+    <footer class="footer">
 
     </footer>
     <!--<script type="text/javascript" src=""></script>-->
