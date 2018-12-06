@@ -33,6 +33,15 @@ h1 strong{
  color: #026fff;
 }
 
+h2{
+  color: #026fff;
+  text-transform: uppercase;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
 .hero{
   height: 300px;
   background-image: url('../images/hero.jpg');
@@ -46,6 +55,7 @@ h1 strong{
 
 .portfolio{
   background: #fafafa;
+  padding: 20px;
 }
 
 .project {
@@ -54,10 +64,33 @@ h1 strong{
   box-sizing: border-box; /*No cambia el tamaño de la caja, el width ocupa hasta el border*/
   border: 1px solid gray;
   border-radius: 10px;
-  margin: 10px;
+  /* margin: 10px; */
   margin-bottom: 15px;
   padding: 20px;
   background: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-course,
+.project-date,
+.project-url{
+  margin: 10px 0;
+}
+
+.project-description{
+  font-size: 20px;
+}
+
+.project strong{
+  font-family: 'Fjalla One', sans-serif;
+}
+
+.project-title{
+  font-size: 30px;
+  margin-top: 0px;
+  margin-bottom: 10px;
 }
 
 .project-details {
@@ -111,6 +144,112 @@ figure {
   height: inherit;
   align-items: center;
   padding: 0 10px;
+}
+
+.experience-list{
+  display: flex;
+}
+
+.experience-list-title{
+  margin-left: 20px;
+}
+
+.experience{
+  margin: 10px;
+  margin: 10px;
+  width: 480px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  overflow: hidden;/*Generar scrolls*/
+  background: #f4fbff;
+}
+
+.experience iframe {
+  width:480px;
+  height:200px;
+  object-fit: cover; /*Recorta parte de la imagen*/
+}
+
+.experience-detail{
+  margin: 20px 40px;
+  margin-top: -40px;
+  background-color: white;
+  position: relative;
+  padding: 20px;
+  text-align: center;
+}
+
+.experience-description{
+  text-align: left;
+}
+
+.experience-url{
+  /* color: #056fff; */
+  border: 1px solid #056fff;
+  padding: 5px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact{
+  background-color: #056fff;
+  color: white;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.social{
+}
+
+.social-link{
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0 10px;
+  background-size: 50px 50px;
+}
+
+.social-link.twitter{
+  background-image: url('../images/twitter.svg'); /*Al ser svg hay que asignarle un tamaño*/
+  /* background-size: 50px 50px; */
+}
+
+.social-link.github{
+  background-image: url('../images/github.svg'); /*Al ser svg hay que asignarle un tamaño*/
+}
+
+.social-link.instagram{
+  background-image: url('../images/instagram.svg'); /*Al ser svg hay que asignarle un tamaño*/
+}
+
+.form-email input{
+  border-color: gray;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 20px 10px 25px;
+  background-image: url('../images/envelope.svg');
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position-y: center;
+  background-position-x: 5px;
+}
+
+.form-email button{
+  display: block;
+  margin-top: 10px;
+  background: transparent;
+  color: white;
+  padding: 10px 0;
+  border-radius: 5px;
+  width: 100px;
+  margin-top: 10px;
+  /* margin: 10px auto 0; */
+}
+
+.form-email h3{
+  font-family: 'Source Sans Pro', sans-serif;
 }
 
 .footer {
