@@ -8,6 +8,16 @@ body{
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.container{
+  width: 1000px;
+  margin: 0 auto;
+  display: inherit;
+  justify-content: inherit;
+  align-items: inherit;
+  height: inherit;
+  flex-wrap: inherit;
+}
+
 h1,
 h2,
 h3,
@@ -44,13 +54,18 @@ h2{
 
 .hero{
   height: 300px;
-  background-image: url('../images/hero.jpg');
+  /* background-image: url('../images/hero.jpg'); */
   background-color: #1d252c;
-  background-size: 500px 300px;
-  background-repeat: no-repeat;
-  background-position-x: right;
+  /* background-size: 500px 300px; */
+  /* background-repeat: no-repeat; */
+  /* background-position-x: right; */
   display: flex;
   align-items: center;
+  justify-content: space-between;
+}
+
+.hero-image{
+  object-fit: cover;
 }
 
 .portfolio{
@@ -64,6 +79,8 @@ h2{
   box-sizing: border-box; /*No cambia el tamaño de la caja, el width ocupa hasta el border*/
   border: 1px solid gray;
   border-radius: 10px;
+  box-shadow: 3px 5px 33px #888888;
+  /* box-shadow: x y (radio desenfoque)(aumento de escala)(estilo / tipo) color; */
   /* margin: 10px; */
   margin-bottom: 15px;
   padding: 20px;
@@ -148,6 +165,7 @@ figure {
 
 .experience-list{
   display: flex;
+  flex-wrap: wrap;
 }
 
 .experience-list-title{
