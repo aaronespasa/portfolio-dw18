@@ -23,6 +23,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body>
+    <i class="icon-menu burger-button"></i>
     <header class="header">
       <div class="container">
         <figure class="logo">
@@ -44,14 +45,14 @@
       </div>
     </header>
 
-    <!-- <section class="hero">
+    <section class="hero">
       <div class="container">
         <h1>
           Hola! Soy <strong>Aarón Espasandín</strong><br/>Desarrollador <strong>JavaScript</strong> con<br/>pasión por el <strong>aprendizaje</strong>
         </h1>
         <img class="hero-image" src="images/hero-playa.jpg" width="500px" height="300px" alt="Imagen Principal">
       </div>
-    </section> -->
+    </section>
     <section id="portafolio" class="portfolio">
       <div class="container">
         <h2>Portafolio (Proyectos Destacados)</h2>
@@ -92,7 +93,10 @@
       <div class="container">
         <article class="experience">
           <figure class="experience-video-container">
-            <iframe class="experience-video" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" allow="autoplay encrypted-media" allowfullscreen>
+            <!--<video class="html-video" width="1280px" height="720px" controls 
+              autoplay src="https://www.youtube.com/watch?v=LoKvxCSZw5w">
+             </video>-->
+            <iframe class="experience-video" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" autoplay allowfullscreen>
             </iframe>
           </figure>
           <div class="experience-detail">
@@ -103,7 +107,7 @@
         </article>
         <article class="experience">
           <figure class="experience-video-container">
-            <iframe class="experience-video" width="560" height="315" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" allow="autoplay encrypted-media" allowfullscreen>
+            <iframe class="experience-video" width="560" height="315" src="https://www.youtube.com/embed/BIS7cWGgJg0" frameborder="0" autoplay allowfullscreen>
             </iframe>
           </figure>
           <div class="experience-detail">
@@ -140,7 +144,28 @@
         </div>
       </div>
     </footer>
-    <!--<script type="text/javascript" src=""></script>-->
+    <script type="text/javascript">
+      const burgerButton = document.querySelector('.burger-button'),
+            menu = document.querySelector('.menu'),
+            link = document.querySelector('.link'),
+            ipad = window.matchMedia('screen and (max-width: 768px)');
+
+      ipad.addListener( event => {
+        if (event.matches) {
+          burgerButton.addEventListener('click', () => {
+            menu.classList.toggle('is-active');
+          })
+        } else {
+          burgerButton.removeEventListener('click', () => {
+            menu.classList.toggle('is-active');
+          })
+        }
+      })
+
+      link.addEventListener('click', () => {
+        menu.classList.remove('is-active');
+      })
+    </script>
 
     <!--Animaciones de scroll-->
     <script src="scripts/jquery-1.8.3.min.js"></script>
